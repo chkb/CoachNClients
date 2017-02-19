@@ -1,0 +1,27 @@
+<md-toolbar class="toolbar" color="primary">
+    <span>COACH N CLIENTS</span>
+</md-toolbar>
+<div fxLayout="row">
+    <div class="sidenav">
+        <md-list class="link">
+            <md-list-item>
+                <a routerLink="/dashboard" routerLinkActive="active-link" mdTooltip="Dashboard" mdTooltipPosition="after">
+                    <md-icon>dashboard</md-icon>
+                </a>
+            </md-list-item>
+            <md-list-item>
+                <a routerLink="/clients" routerLinkActive="active-link" mdTooltip="Clients" mdTooltipPosition="after">
+                    <md-icon>group</md-icon>
+                </a>
+            </md-list-item>
+            <md-list-item>
+                <a routerLink="/settings" routerLinkActive="active-link" mdTooltip="Settings" mdTooltipPosition="after">
+                    <md-icon>settings_applications</md-icon>
+                </a>
+            </md-list-item>
+        </md-list>
+    </div>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</div>

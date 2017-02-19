@@ -1,0 +1,14 @@
+<md-toolbar>{{title}}</md-toolbar>
+<br>
+<md-card class="card">
+  <md-card-header>
+    <md-card-title>CLIENTS</md-card-title>
+    <md-card-subtitle>Total active clients</md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+    <h1>{{(items | async)?.length}} <md-icon class="action-btn" routerLink="/clients">group</md-icon></h1>
+    
+  </md-card-content>
+  <md-card-actions>
+  </md-card-actions>
+</md-card>

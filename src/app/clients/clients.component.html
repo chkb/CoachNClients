@@ -1,0 +1,27 @@
+<md-toolbar>{{title}}</md-toolbar>
+<br>
+<md-input-container>
+  <input mdInput placeholder="SEARCH">
+</md-input-container>
+
+<div fxLayout="column" *ngFor="let item of items | async">
+    <div fxFlex > 
+      <md-card class="card" >
+        <md-card-header>
+          <md-card-title>{{item.fullname}}</md-card-title>
+          <md-card-subtitle>{{item.email}}</md-card-subtitle>
+        </md-card-header>
+        <md-card-content>
+        </md-card-content>
+        <md-card-actions>
+          <md-icon (click)="delete(item.$key)" class="action-btn">delete</md-icon>
+          <md-icon class="action-btn">perm_identity</md-icon>
+        </md-card-actions>
+      </md-card>
+      <br>
+    </div>
+</div>
+
+<a class="float-btn" md-fab (click)="add()" mdTooltipPosition="before" mdTooltip="Ny Bruger" color="accent">
+    <md-icon>add</md-icon>
+</a>
